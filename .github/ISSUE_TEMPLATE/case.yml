@@ -1,0 +1,74 @@
+name: 案例投稿 / Case
+description: 真实项目经验，须脱敏
+title: "[case] "
+labels: ["case"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        接受真实案例与明确标注的合成案例。**不接受只有结论没有过程的故事。**
+        投稿前请脱敏：客户名、金额、具体人名一律替换。
+  - type: dropdown
+    id: entropy
+    attributes:
+      label: 落在五熵的哪一层
+      options:
+        - 意图熵（客户说不清要什么）
+        - 边界熵（范围失控）
+        - 现实熵（数据与系统不符）
+        - 效果熵（说不清算不算达标）
+        - 留存熵（上线没人用 / 交接不了）
+        - 跨层（多层同时出问题）
+    validations:
+      required: true
+  - type: dropdown
+    id: industry
+    attributes:
+      label: 行业
+      options:
+        - 制造
+        - 金融
+        - 医疗
+        - 零售消费
+        - 企业服务 / SaaS
+        - 公共部门
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: situation
+    attributes:
+      label: 处境
+      description: 谁、什么时间、什么约束、代价是什么
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: 出了什么问题
+      description: 尽量写可观察的现象，而不是归因
+    validations:
+      required: true
+  - type: textarea
+    id: handling
+    attributes:
+      label: 后来怎么处理
+      description: 如果没解决，写清卡在哪
+    validations:
+      required: true
+  - type: textarea
+    id: lesson
+    attributes:
+      label: 你认为这条经验应该改哪一节
+      description: 可以是「应该新增一节」，但请说明现有哪一节覆盖不了
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 已脱敏，不含客户名、金额与人名
+          required: true
+        - label: 内容为本人亲历，或已明确标注为合成案例
+          required: true

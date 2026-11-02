@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "FDE 指导手册：前沿部署工程师的交付方法与判断标准"
+message: "引用本书请使用以下格式。本书为活文档，请注明引用时的版本号。"
+type: book
+authors:
+  - family-names: 吴
+    given-names: 叉叉
+version: 0.1.0
+date-released: 2026-11-02
+url: "https://github.com/Marlboro90/fde-handbook"
+repository-code: "https://github.com/Marlboro90/fde-handbook"
+license: CC-BY-NC-SA-4.0
+keywords:
+  - forward deployed engineer
+  - FDE
+  - enterprise AI
+  - AI delivery
+  - 前沿部署工程师
+abstract: >-
+  《FDE 指导手册》以「五熵模型」为骨架，把一次完整的企业 AI 客户交付拆成
+  意图、边界、现实、效果、留存五层不确定性，逐层给出收敛手段与放行判据。
+  全书 14 章 56 节，每节含一句可辩驳的主张、一张放行判据卡与练习题，
+  每章产出一份可交付文档，构成一条十三环的交付凭证链。

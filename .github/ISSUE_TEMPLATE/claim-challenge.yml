@@ -1,0 +1,47 @@
+name: 主张质证 / Claim Challenge
+description: 用可复现的反例推翻某条主张
+title: "[claim] C-"
+labels: ["claim-challenge"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        全书 56 条主张都有编号。**成立的标准是可复现的反例，不是不同意见。**
+
+        - ❌「我觉得这个判据太严」——偏好。
+        - ✅「我们三人的项目 ADR 五段齐全，但新同事仍无法复现决策，原因是环境约束没进 ADR。所以 4.4 的判据在小组场景不成立。」
+  - type: input
+    id: claim_id
+    attributes:
+      label: 主张编号
+      description: 形如 C-4.3，见对应小节开头的 claim_id 字段
+      placeholder: "C-4.3"
+    validations:
+      required: true
+  - type: textarea
+    id: claim_text
+    attributes:
+      label: 该主张原文
+    validations:
+      required: true
+  - type: textarea
+    id: counterexample
+    attributes:
+      label: 我的反例
+      description: 具体场景、约束、发生了什么。越具体越可能成立。
+    validations:
+      required: true
+  - type: textarea
+    id: judgment
+    attributes:
+      label: 我的判断
+      description: 这条主张应该改成什么，或者应该在什么条件下才成立
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 可提供的证据
+      description: 脱敏后的记录、日志、文档片段（可选但强烈建议）
+    validations:
+      required: false
